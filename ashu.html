@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    /* CSS for styling the website */
+    body {
+      background-color: #f2f2f2;
+    }
+    .navbar {
+      background-color: rgb(33, 224, 75);
+      color: #fff;
+      padding: 10px;
+    }
+    .footer {
+      background-color: rgb(41, 2, 63);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;     
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <h1>My Website</h1>
+  </div>
+  <div class="container">
+    <h1 id="heading">Welcome to my website!</h1>
+    <p>Hey, how you doing?.
+      Ashutosh here! and this is my website for Webwiz!
+    </p>
+    <button onclick="promptWelcome()">Prompt</button>
+    <button onclick="changeBG()">Change BG</button>
+    <button onclick="changeHeading()">Change Heading</button>
+    <p id="time"></p>
+  </div>
+  <div class="footer">
+    Copyright©2023
+  </div>
+  <script>
+    // JavaScript for adding functionality to the website
+    function promptWelcome() {
+      alert("Welcome to my website!");
+    } 
+    function changeBG() {
+      document.body.style.backgroundColor = "#ff0000";
+    }
+    function changeHeading() {
+      setTimeout(function() {
+        document.getElementById("heading").innerHTML = "The heading has changed!";
+      }, 5000);
+    }
+    setInterval(function(){
+      var currentTime = new Date().toLocaleString();
+      document.getElementById("time").innerHTML = currentTime;
+    }, 1000);
+  </script>
+</body>
+</html>
